@@ -15,9 +15,7 @@ client.on("error", function (err) {
     console.log("Error " + err);
 });
 
-app.use(compression({
-  filter: function () { return true; }
-}));
+app.use(compression());
 
 app.use(express.static('public',{
   maxage: '1y'
